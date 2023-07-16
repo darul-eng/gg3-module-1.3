@@ -1,0 +1,28 @@
+
+### tes
+GET http://localhost:3000/tes
+Accept: application/json
+
+### get song
+GET http://localhost:3000/api/song
+Accept: application/json
+
+### create song
+POST http://localhost:3000/api/song
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Tes",
+  "duration": 4,
+  "artists": [
+    {
+      "name": "Ikhsan"
+    }
+  ],
+  "url": "localhost"
+}
+
+### get song by Id
+GET http://localhost:3000/api/song/360131
+Accept: application/json

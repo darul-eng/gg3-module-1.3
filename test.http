@@ -26,3 +26,14 @@ Content-Type: application/json
 ### get song by Id
 GET http://localhost:3000/api/song/360131
 Accept: application/json
+
+### create playlist
+POST http://localhost:3000/api/playlist
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Testi",
+  "desc":  "tstopi",
+  "songs": ["123", "12345"]
+}

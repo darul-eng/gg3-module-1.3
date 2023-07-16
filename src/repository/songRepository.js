@@ -1,7 +1,7 @@
 import helper from "../helper/helper.js";
 let songs = [
     {
-        songId: "1",
+        _id: "1",
         title: "abc",
         artists: [
             {
@@ -14,7 +14,7 @@ let songs = [
         isPlayed: false
     },
     {
-        songId: "2",
+        _id: "2",
         title: "abc",
         artists: [
             {
@@ -27,7 +27,7 @@ let songs = [
         isPlayed: false
     },
     {
-        songId: "2",
+        _id: "2",
         title: "abc",
         artists: [
             {
@@ -64,7 +64,7 @@ const createSong = async (title, duration, artists, url) => {
     }
 
     songs.push(song);
-    return song.songId;
+    return song;
 }
 
 const getSongById = async (songId) => {

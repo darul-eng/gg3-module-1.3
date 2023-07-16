@@ -1,13 +1,12 @@
 import songRepository from "../repository/songRepository.js";
-import songController from "../controller/songController.js";
 const getSongs = async () => {
     const songs = await songRepository.getSongs();
     return songs
 }
 
 const createSong = async (title, duration, artists, url) => {
-    const songId = await songRepository.createSong(title, duration, artists, url);
-    return songId;
+    const song = await songRepository.createSong(title, duration, artists, url);
+    return song;
 }
 
 const getSongById = async (songId) => {

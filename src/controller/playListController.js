@@ -13,4 +13,17 @@ const createPlayList = async (req, res) => {
     }
 }
 
-export default {createPlayList};
+const playCount = async (req, res) => {
+    try {
+        const playListId = req.params.id;
+        const playCount = await playListService.playCount(playListId);
+        res.status(200).json({
+            message: "Success",
+            data: playCount
+        })
+    }catch (error) {
+        res.status(500).json({error: error.message});
+    }
+}
+
+export default {createPlayList, playCount};

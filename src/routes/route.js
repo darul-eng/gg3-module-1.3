@@ -7,5 +7,6 @@ router.get('/song', songController.getSongs);
 router.post('/song', songController.createSong);
 router.get('/song/:id', songController.getSongById);
 router.post('/playlist', playListController.createPlayList);
+router.get('/playlist/:id/play-count', playListController.playCount)
 
 export {router};

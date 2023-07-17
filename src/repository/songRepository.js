@@ -1,4 +1,5 @@
 import helper from "../helper/helper.js";
+
 let songs = [
     {
         _id: "1",
@@ -27,7 +28,7 @@ let songs = [
         isPlayed: false
     },
     {
-        _id: "2",
+        _id: "3",
         title: "abc",
         artists: [
             {
@@ -69,8 +70,7 @@ const createSong = async (title, duration, artists, url) => {
 
 const getSongById = async (songId) => {
     const songs = await songPromise
-
-    return songs.find((song) => song.songId === songId);
+    return songs.find((song) => song._id === songId)
 }
 
 export default {getSongs, createSong, getSongById};

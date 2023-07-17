@@ -24,7 +24,7 @@ Content-Type: application/json
 }
 
 ### get song by Id
-GET http://localhost:3000/api/song/360131
+GET http://localhost:3000/api/song/2
 Accept: application/json
 
 ### create playlist
@@ -37,3 +37,7 @@ Content-Type: application/json
   "desc":  "tstopi",
   "songs": ["123", "12345"]
 }
+
+### get play count of song from playlist
+GET http://localhost:3000/api/playlist/12/play-count
+Accept: application/json

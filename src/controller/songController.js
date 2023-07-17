@@ -40,4 +40,16 @@ const getSongById = async (req, res) => {
     }
 }
 
-export default {getSongs, createSong, getSongById};
+const playSong = async (req, res) => {
+    try {
+        const song = await songService.playSong(req.params.id,);
+        res.status(200).json({
+            message: "Success",
+            data: song
+        })
+    }catch (error){
+        res.status(500).json({error: error.message})
+    }
+}
+
+export default {getSongs, createSong, getSongById, playSong};

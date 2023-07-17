@@ -17,4 +17,11 @@ const getSongById = async (songId) => {
     return song;
 }
 
-export default {getSongs, createSong, getSongById};
+const playSong = async (songId) => {
+    const song = await songRepository.getSongById(songId);
+    song.played += 1;
+
+    return song
+}
+
+export default {getSongs, createSong, getSongById, playSong};

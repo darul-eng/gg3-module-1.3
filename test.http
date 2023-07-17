@@ -40,5 +40,5 @@ Content-Type: application/json
 }
 
 ### get play count of song from playlist
-GET http://localhost:3000/api/playlist/078203/play-count
+GET http://localhost:3000/api/playlist/12/play-count
 Accept: application/json

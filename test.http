@@ -1,0 +1,44 @@
+### get song ( can get all song without sort and with sort most-played)
+// GET http://localhost:3000/api/song
+GET http://localhost:3000/api/song?sort=most-played
+Accept: application/json
+
+### create song
+POST http://localhost:3000/api/song
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Tes",
+  "duration": 4,
+  "artists": [
+    {
+      "name": "Ikhsan"
+    }
+  ],
+  "url": "localhost"
+}
+
+### get song by Id
+GET http://localhost:3000/api/song/2
+Accept: application/json
+
+### play song
+POST http://localhost:3000/api/song/2/play
+Accept: application/json
+Content-Type: application/json
+
+### create playlist
+POST http://localhost:3000/api/playlist
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Play List 1",
+  "desc":  "Play List Lagu ",
+  "songs": ["3", "2"]
+}
+
+### get play count of song from playlist
+GET http://localhost:3000/api/playlist/078203/play-count
+Accept: application/json

@@ -53,6 +53,13 @@ const getSongs = async () => {
     return songs;
 }
 
+const getSongSortByMostPlayed = async () => {
+    const songs = await songPromise;
+    songs.sort((a, b) => b.played - a.played)
+
+    return songs;
+}
+
 const createSong = async (title, duration, artists, url) => {
     const song = {
         songId: helper.generateSongId(),
@@ -73,4 +80,4 @@ const getSongById = async (songId) => {
     return songs.find((song) => song._id === songId)
 }
 
-export default {getSongs, createSong, getSongById};
+export default {getSongs, createSong, getSongById, getSongSortByMostPlayed};

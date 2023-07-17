@@ -2,8 +2,9 @@ import songService from "../service/songService.js";
 import * as url from "url";
 
 const getSongs = async (req, res) => {
+    const params = req.query.sort;
     try{
-        const songs = await songService.getSongs();
+        const songs = await songService.getSongs(params);
         res.status(200).json({
             message: "Success",
             data: songs

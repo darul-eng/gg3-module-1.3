@@ -1,11 +1,8 @@
-
-### tes
-GET http://localhost:3000/tes
+### get song ( can get all song without sort and with sort most-played)
+// GET http://localhost:3000/api/song
+GET http://localhost:3000/api/song?sort=most-played
 Accept: application/json
 
-### get song
-GET http://localhost:3000/api/song
-Accept: application/json
 
 ### create song
 POST http://localhost:3000/api/song
@@ -33,11 +30,11 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "title": "Testi",
-  "desc":  "tstopi",
-  "songs": ["123", "12345"]
+  "title": "Play List 1",
+  "desc":  "Play List Lagu ",
+  "songs": ["3", "2"]
 }
 
 ### get play count of song from playlist
-GET http://localhost:3000/api/playlist/12/play-count
+GET http://localhost:3000/api/playlist/078203/play-count
 Accept: application/json

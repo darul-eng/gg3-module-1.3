@@ -1,4 +1,4 @@
-Task Generasi GIGIH 3 - Simple Spotify Playlist Server
+### Task Generasi GIGIH 3 - Simple Spotify Playlist Server
 
 Continuing previous session homework with this additional rule:
 1. Make playlist as a model
